@@ -40,7 +40,6 @@ public class APlayer extends AInvenory {
         if(player.level.isClientSide()) return;
         player.drop(player.inventory.getItem(i), t);
         player.setSlot(i, new ItemStack(Items.AIR));
-        return;
     }
     @ZenCodeType.Method
     public static void setFlyPlayer(PlayerEntity player){

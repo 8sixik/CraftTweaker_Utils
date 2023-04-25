@@ -142,6 +142,10 @@ repositories {
         name 'curios API'
         url 'https://maven.theillusivec4.top/'
     }
+    maven {
+        name 'architectury API'
+        url "https://maven.architectury.dev/"
+    }
 }
 
 dependencies {
