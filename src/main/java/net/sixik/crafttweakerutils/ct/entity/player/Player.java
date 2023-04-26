@@ -1,11 +1,20 @@
 package net.sixik.crafttweakerutils.ct.entity.player;
 
 import com.blamejared.crafttweaker.api.annotations.ZenRegister;
+import com.blamejared.crafttweaker.api.item.IItemStack;
+import com.blamejared.crafttweaker.impl.item.MCItemStack;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Items;
 import net.minecraft.world.storage.MapData;
 import org.openzen.zencode.java.ZenCodeType;
 import org.spongepowered.asm.mixin.Mutable;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotResult;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 @ZenRegister
 @NativeTypeRegistration(value = PlayerEntity.class, zenCodeName = "crafttweaker.api.player.MCPlayerEntity")
@@ -100,4 +109,56 @@ public class Player {
     public static void setyBodyRot(PlayerEntity player, float yaw){
         player.yBodyRot = yaw;
     }
+
+
+    @ZenCodeType.Method
+    public static IItemStack getCuriosItem(PlayerEntity inventory, int index){
+        if(CuriosApi.getCuriosHelper().findCurios(inventory).size() == 0) return null;
+        else {
+            return new MCItemStack(CuriosApi.getCuriosHelper().findCurios(inventory).get(index).getStack());
+        }
+    }
+    @ZenCodeType.Method
+    public static int getCuriosItemSlot(PlayerEntity inventory, IItemStack item){
+        for(int i = 0; i < CuriosApi.getCuriosHelper().findCurios(inventory).size(); i++){
+            if(CuriosApi.getCuriosHelper().findCurios(inventory).get(i).getStack().equals(item.getInternal())){
+                return i;
+            }
+        }
+        return -1;
+    }
+    @ZenCodeType.Method
+    public static boolean isCuriosEquip(PlayerEntity inventory, IItemStack item){
+        for(int i = 0; i < CuriosApi.getCuriosHelper().findCurios(inventory).size(); i++){
+            if(CuriosApi.getCuriosHelper().findCurios(inventory).get(i).getStack().equals(item.getInternal())){
+                return true;
+            }
+        }
+        return false;
+    }
+    @ZenCodeType.Method
+    public static int getSlotsCount(PlayerEntity inventory){
+        return CuriosApi.getCuriosHelper().findCurios(inventory).size();
+    }
+    @ZenCodeType.Method
+    public static int getSlotsCount(PlayerEntity inventory, String slot){
+        for(int i = 0; i < CuriosApi.getSlotHelper().getSlotTypes(inventory).size(); i++){
+            if(CuriosApi.getSlotHelper().getSlotTypes(inventory).toArray()[i] == slot){
+               return CuriosApi.getSlotHelper().getSlotType(slot).get().getSize();
+            }
+        }
+        return -1;
+    }
+    @ZenCodeType.Method
+    public static String[] getSlotsType(PlayerEntity inventory){
+        List<String> curiosList = new ArrayList<>();
+        String[] t = {};
+        if(CuriosApi.getSlotHelper().getSlotTypes(inventory).isEmpty() || CuriosApi.getSlotHelper().getSlotTypes(inventory).size() == 0) return t;
+        for(int i = 0; i < CuriosApi.getSlotHelper().getSlotTypes(inventory).size(); i++){
+            curiosList.add((String) CuriosApi.getSlotHelper().getSlotTypes(inventory).toArray()[i]);
+        }
+        return (String[]) curiosList.toArray();
+    }
+
+
 }
