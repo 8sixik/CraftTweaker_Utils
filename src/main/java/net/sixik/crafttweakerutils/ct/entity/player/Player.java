@@ -61,34 +61,42 @@ public class Player {
         player.setNoGravity(type);
     }
     @ZenCodeType.Method
+    @ZenCodeType.Getter("xrot")
     public static float getxRot(PlayerEntity player) {
        return player.xRot;
     }
     @ZenCodeType.Method
+    @ZenCodeType.Getter("yrot")
     public static float getyRot(PlayerEntity player){
         return player.yRot;
     }
     @ZenCodeType.Method
+    @ZenCodeType.Setter("xrot")
     public static void setxRot(PlayerEntity player, float rot) {
        player.xRot = rot;
     }
     @ZenCodeType.Method
+    @ZenCodeType.Setter("yrot")
     public static void setyRot(PlayerEntity player, float yaw){
         player.yRot = yaw;
     }
     @ZenCodeType.Method
+    @ZenCodeType.Getter("headrot")
     public static float getyHeadRot(PlayerEntity player){
         return player.yHeadRot;
     }
     @ZenCodeType.Method
+    @ZenCodeType.Setter("headrot")
     public static void setyHeadRot(PlayerEntity player, float yaw){
         player.yHeadRot = yaw;
     }
     @ZenCodeType.Method
+    @ZenCodeType.Getter("bodyrot")
     public static float getyBodyRot(PlayerEntity player){
         return player.yBodyRot;
     }
     @ZenCodeType.Method
+    @ZenCodeType.Setter("bodyrot")
     public static void setyBodyRot(PlayerEntity player, float yaw){
         player.yBodyRot = yaw;
     }

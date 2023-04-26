@@ -5,8 +5,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.event.DifficultyChangeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityStruckByLightningEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -51,9 +53,6 @@ public class ServerEvents {
             long leftTime = world.getGameTime() - tEnd;
             player.getPersistentData().putLong(CraftTweakerUtils.MOD_ID + "lefttime", leftTime);
         }
-
-
-
     }
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event){
@@ -84,4 +83,6 @@ public class ServerEvents {
             player.getPersistentData().putBoolean(CraftTweakerUtils.MOD_ID + "timercomplite", true);
         }
     }
+
+
 }

@@ -2,6 +2,7 @@ package net.sixik.crafttweakerutils;
 
 import com.blamejared.crafttweaker.api.CraftTweakerAPI;
 import com.mojang.brigadier.LiteralMessage;
+import com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX2DTM2;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
@@ -54,8 +55,6 @@ public class CraftTweakerUtils
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
-
     }
 
     private void setup(final FMLCommonSetupEvent event)
