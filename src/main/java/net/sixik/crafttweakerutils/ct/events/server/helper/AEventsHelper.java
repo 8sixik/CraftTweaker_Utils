@@ -1,4 +1,4 @@
-package net.sixik.crafttweakerutils.ct.events.helper;
+package net.sixik.crafttweakerutils.ct.events.server.helper;
 
 import com.blamejared.crafttweaker.api.annotations.ZenRegister;
 import com.blamejared.crafttweaker.api.item.IItemStack;

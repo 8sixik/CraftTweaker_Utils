@@ -1,4 +1,4 @@
-package net.sixik.crafttweakerutils.ct.events.world;
+package net.sixik.crafttweakerutils.ct.events.server.world;
 
 import com.blamejared.crafttweaker.api.annotations.ZenRegister;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;

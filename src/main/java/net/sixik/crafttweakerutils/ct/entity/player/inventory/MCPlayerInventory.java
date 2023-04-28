@@ -11,12 +11,12 @@ import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.SlotResult;
 import top.theillusivec4.curios.api.type.util.ICuriosHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @ZenRegister
 @NativeTypeRegistration(value = PlayerInventory.class, zenCodeName = "crafttweaker.api.inventory.PlayerInventory")
 public class MCPlayerInventory {
-
 
     @ZenCodeType.Method
     public static int getItemSlot(PlayerInventory inventory, IItemStack item){

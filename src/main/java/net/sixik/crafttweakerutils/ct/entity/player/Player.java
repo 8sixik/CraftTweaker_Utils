@@ -158,6 +158,7 @@ public class Player {
             curiosList.add((String) CuriosApi.getSlotHelper().getSlotTypes(inventory).toArray()[i]);
         }
         return (String[]) curiosList.toArray();
+
     }
 
 

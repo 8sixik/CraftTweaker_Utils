@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.2.3'
+version = '0.2.5'
 group = 'net.sixik.crafttweakerutils' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'crafttweakerutils'
 
@@ -142,9 +142,13 @@ repositories {
         name 'curios API'
         url 'https://maven.theillusivec4.top/'
     }
-    maven {
+    maven { 
         name 'architectury API'
         url "https://maven.architectury.dev/"
+    }
+    maven {
+        name = "Curseforge" // Curseforge Maven
+        url = "https://www.cursemaven.com/"
     }
 }
 
@@ -155,6 +159,7 @@ dependencies {
 
     implementation ct
     implementation fg.deobf("mezz.jei:jei-1.16.4:7.6.1.65")
+    implementation fg.deobf("curse.maven:pmmo-353935:4421028")
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.1.0.0")
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.1.0.0:api")
 

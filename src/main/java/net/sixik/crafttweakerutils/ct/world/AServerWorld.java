@@ -3,6 +3,7 @@ package net.sixik.crafttweakerutils.ct.world;
 import com.blamejared.crafttweaker.api.annotations.ZenRegister;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.server.ServerWorld;
@@ -163,6 +164,10 @@ public class AServerWorld {
     public static int getChunkMinBlockZ(ServerWorld world, BlockPos pos){
         return world.getChunk(pos).getPos().getMinBlockZ();
     }
+
+//    public static void test(ServerWorld world, PlayerEntity player){
+//
+//    }
 
 //    public static void getGameRule(ServerWorld world, boolean t, int type){
 //        GameRules rule = world.getGameRules();
