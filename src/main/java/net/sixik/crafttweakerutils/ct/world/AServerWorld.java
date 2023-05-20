@@ -2,18 +2,32 @@ package net.sixik.crafttweakerutils.ct.world;
 
 import com.blamejared.crafttweaker.api.annotations.ZenRegister;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
+import net.minecraft.advancements.criterion.LocationPredicate;
+import net.minecraft.advancements.criterion.MinMaxBounds;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.scoreboard.ScoreObjective;
+import net.minecraft.server.CustomServerBossInfoManager;
+import net.minecraft.util.RegistryKey;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.feature.structure.Structure;
+import net.minecraft.world.gen.feature.structure.StructureManager;
+import net.minecraft.world.gen.feature.structure.StructureStart;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.world.StructureSpawnManager;
 import org.openzen.zencode.java.ZenCodeType;
 
+import java.util.Collection;
 import java.util.UUID;
 
 @ZenRegister
 @NativeTypeRegistration(value = ServerWorld.class, zenCodeName = "crafttweaker.api.world.MCServerWorld")
-public class AServerWorld {
+public class    AServerWorld {
 
     @ZenCodeType.Method
     public static BlockPos getRandomPos(ServerWorld world, int[] t){
@@ -161,9 +175,14 @@ public class AServerWorld {
         return world.getChunk(pos).getPos().getMinBlockX();
     }
     @ZenCodeType.Method
-    public static int getChunkMinBlockZ(ServerWorld world, BlockPos pos){
-        return world.getChunk(pos).getPos().getMinBlockZ();
+    public static void setDefaultSpawnPos(ServerWorld world, ResourceLocation res, BlockPos pos, float f){
+        RegistryKey<World> worldK = RegistryKey.create(Registry.DIMENSION_REGISTRY, res);
+        world.getServer().getLevel(worldK).setDefaultSpawnPos(pos, f);
     }
+//    @ZenCodeType.Method
+//    public static String testLevels(ServerWorld world){
+//        return world.getServer().getLevel()
+//    }
 
 //    public static void test(ServerWorld world, PlayerEntity player){
 //

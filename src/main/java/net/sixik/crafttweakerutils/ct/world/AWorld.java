@@ -33,7 +33,7 @@ public class AWorld {
             GameRules tst = server.getGameRules();
             tst.getRule(GameRules.RULE_KEEPINVENTORY).set(true, server.getServer());
             TemplateManager templateManager = server.getStructureManager();
-            Template template = templateManager.get(res);
+            Template template = templateManager.getOrCreate(res);
             if (template != null) {
                 template.placeInWorld(server, pos, new PlacementSettings().setRandom(server.random), server.random);
                 CraftTweakerAPI.logInfo("Template loaded");

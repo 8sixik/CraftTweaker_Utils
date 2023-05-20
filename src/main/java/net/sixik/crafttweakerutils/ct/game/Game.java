@@ -4,6 +4,7 @@ import com.blamejared.crafttweaker.api.annotations.ZenRegister;
 
 import com.blamejared.crafttweaker.impl.game.MCGame;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.MinecraftGame;
 import net.minecraftforge.client.MinecraftForgeClient;
 import org.openzen.zencode.java.ZenCodeType;

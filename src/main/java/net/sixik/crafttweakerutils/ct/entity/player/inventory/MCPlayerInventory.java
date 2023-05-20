@@ -7,9 +7,6 @@ import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistratio
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import org.openzen.zencode.java.ZenCodeType;
-import top.theillusivec4.curios.api.CuriosApi;
-import top.theillusivec4.curios.api.SlotResult;
-import top.theillusivec4.curios.api.type.util.ICuriosHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,17 +36,6 @@ public class MCPlayerInventory {
     @ZenCodeType.Method
     public static void setArrmor(PlayerInventory inventory, int slot, IItemStack item){
         inventory.armor.set(slot, item.getInternal());
-    }
-    @ZenCodeType.Method
-    public static int getCuriosItem(PlayerInventory inventory, IItemStack item){
-        ICuriosHelper curio = (ICuriosHelper) CuriosApi.getCuriosHelper().getEquippedCurios(inventory.player);
-        List<SlotResult> slot = curio.findCurios(inventory.player, item.getInternal().getItem());
-        for(int i = 0; i < slot.size(); i++){
-            if(slot.get(i).getStack().equals(item.getInternal())){
-                return i;
-            }
-        }
-        return -1;
     }
 
 }

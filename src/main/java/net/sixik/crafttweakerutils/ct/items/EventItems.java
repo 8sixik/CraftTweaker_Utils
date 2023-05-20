@@ -8,7 +8,7 @@ import org.openzen.zencode.java.ZenCodeType;
 
 import java.util.ArrayList;
 
-import static net.sixik.crafttweakerutils.utils.math.getRanodmInt;
+import static net.sixik.crafttweakerutils.utils.Random.getRandomInt;
 
 @ZenCodeType.Name("mods.crafttweakerutils.api.items.EventItems")
 @ZenRegister
@@ -31,7 +31,7 @@ public class EventItems {
     public static IItemStack getRandomGiveItems(){
         if(RandomGiveItems.isEmpty()) return null;
         else {
-            return new MCItemStack(RandomGiveItems.get(getRanodmInt(0, RandomGiveItems.size())));
+            return new MCItemStack(RandomGiveItems.get(getRandomInt(0, RandomGiveItems.size())));
         }
     }
     @ZenCodeType.Method

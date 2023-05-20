@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.sixik.crafttweakerutils.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "crafttweakerutils.refmap.json",
+  "mixins": [
+    "EnchantMixin",
+    "EntityLivingMixin",
+    "MixinEntityPlayer"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
