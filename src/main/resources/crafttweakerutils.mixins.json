@@ -5,9 +5,12 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "crafttweakerutils.refmap.json",
   "mixins": [
+    "ChestLootGenMixin",
     "EnchantMixin",
     "EntityLivingMixin",
-    "MixinEntityPlayer"
+    "MixinEntityPlayer",
+    "RaidMixin",
+    "VillagerMixin"
   ],
   "client": [
   ],

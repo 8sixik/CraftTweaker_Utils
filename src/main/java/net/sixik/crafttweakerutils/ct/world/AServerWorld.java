@@ -20,6 +20,7 @@ import net.minecraft.world.gen.feature.structure.StructureManager;
 import net.minecraft.world.gen.feature.structure.StructureStart;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.world.StructureSpawnManager;
+import net.sixik.crafttweakerutils.ct.misc.MCRaid;
 import org.openzen.zencode.java.ZenCodeType;
 
 import java.util.Collection;
@@ -173,6 +174,10 @@ public class    AServerWorld {
     @ZenCodeType.Method
     public static int getChunkMinBlockX(ServerWorld world, BlockPos pos){
         return world.getChunk(pos).getPos().getMinBlockX();
+    }
+    @ZenCodeType.Method
+    public static MCRaid getRaidAt(ServerWorld world, BlockPos pos){
+        return MCRaid.getRaid(world.getRaidAt(pos));
     }
     @ZenCodeType.Method
     public static void setDefaultSpawnPos(ServerWorld world, ResourceLocation res, BlockPos pos, float f){
