@@ -1,10 +1,9 @@
 package net.sixik.crafttweakerutils.ct.events.server.entity;
 
-import com.blamejared.crafttweaker.api.annotations.ZenRegister;
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.entity.Entity;
 import net.minecraftforge.event.entity.EntityMobGriefingEvent;
-import net.minecraftforge.event.entity.living.BabyEntitySpawnEvent;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister

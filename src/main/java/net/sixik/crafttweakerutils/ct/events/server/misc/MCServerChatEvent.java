@@ -1,9 +1,9 @@
 package net.sixik.crafttweakerutils.ct.events.server.misc;
 
-import com.blamejared.crafttweaker.api.annotations.ZenRegister;
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.util.text.ITextComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.eventbus.api.Event;
 import org.openzen.zencode.java.ZenCodeType;
@@ -21,11 +21,11 @@ public class MCServerChatEvent {
        return event.getUsername();
     }
     @ZenCodeType.Method
-    public static ITextComponent getComponent(ServerChatEvent event){
+    public static Component getComponent(ServerChatEvent event){
        return event.getComponent();
     }
     @ZenCodeType.Method
-    public static ServerPlayerEntity getPlayer(ServerChatEvent event){
+    public static ServerPlayer getPlayer(ServerChatEvent event){
        return event.getPlayer();
     }
     @ZenCodeType.Method

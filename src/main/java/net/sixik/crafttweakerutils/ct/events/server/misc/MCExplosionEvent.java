@@ -1,10 +1,10 @@
 package net.sixik.crafttweakerutils.ct.events.server.misc;
 
-import com.blamejared.crafttweaker.api.annotations.ZenRegister;
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.world.Explosion;
-import net.minecraft.world.World;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.world.ExplosionEvent;
 import net.minecraftforge.eventbus.api.Event;
 import org.openzen.zencode.java.ZenCodeType;
@@ -17,7 +17,7 @@ public class MCExplosionEvent {
         return event.getExplosion();
     }
     @ZenCodeType.Method
-    public static World getWorld(ExplosionEvent event){
+    public static Level getWorld(ExplosionEvent event){
         return event.getWorld();
     }
     @ZenCodeType.Method
@@ -25,7 +25,7 @@ public class MCExplosionEvent {
         return event.getResult();
     }
     @ZenCodeType.Method
-    public static Vector3d getPos(ExplosionEvent event){
+    public static Vec3 getPos(ExplosionEvent event){
         return event.getExplosion().getPosition();
     }
 }

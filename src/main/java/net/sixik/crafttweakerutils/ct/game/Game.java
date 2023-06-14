@@ -1,11 +1,8 @@
 package net.sixik.crafttweakerutils.ct.game;
 
-import com.blamejared.crafttweaker.api.annotations.ZenRegister;
 
-import com.blamejared.crafttweaker.impl.game.MCGame;
-import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
-import net.minecraft.client.MinecraftGame;
-import net.minecraftforge.client.MinecraftForgeClient;
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+import net.minecraft.client.Minecraft;
 import org.openzen.zencode.java.ZenCodeType;
 
 import java.util.Date;
@@ -15,12 +12,12 @@ import java.util.Date;
 public class Game {
     @ZenCodeType.Method
     public static String getLang(){
-       return MinecraftForgeClient.getLocale().getLanguage();
+       return Minecraft.getInstance().getLanguageManager().getSelected().getName();
     }
 
     @ZenCodeType.Method
     public static String getLanguageTag(){
-       return MinecraftForgeClient.getLocale().toLanguageTag();
+       return Minecraft.getInstance().getLanguageManager().getSelected().getCode();
     }
     @ZenCodeType.Method
     public static long getTime(){

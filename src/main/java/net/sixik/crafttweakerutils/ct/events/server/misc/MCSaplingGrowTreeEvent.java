@@ -1,9 +1,10 @@
 package net.sixik.crafttweakerutils.ct.events.server.misc;
 
-import com.blamejared.crafttweaker.api.annotations.ZenRegister;
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.levelgen.RandomSource;
 import net.minecraftforge.event.world.SaplingGrowTreeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import org.openzen.zencode.java.ZenCodeType;
@@ -15,8 +16,8 @@ import java.util.Random;
 public class MCSaplingGrowTreeEvent {
 
     @ZenCodeType.Method
-    public static World getWorld(SaplingGrowTreeEvent event){
-        return (World) event.getWorld();
+    public static Level getWorld(SaplingGrowTreeEvent event){
+        return (Level) event.getWorld();
     }
     @ZenCodeType.Method
     public static BlockPos getPos(SaplingGrowTreeEvent event){

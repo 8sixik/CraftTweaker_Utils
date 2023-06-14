@@ -1,11 +1,9 @@
 package net.sixik.crafttweakerutils.ct.events.server.entity;
 
-import com.blamejared.crafttweaker.api.annotations.ZenRegister;
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
-import net.minecraft.entity.Entity;
-import net.minecraft.util.text.NBTTextComponent;
-import net.minecraft.world.World;
-import net.minecraftforge.event.entity.EntityMobGriefingEvent;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.EntityMountEvent;
 import org.openzen.zencode.java.ZenCodeType;
 
@@ -25,7 +23,7 @@ public class MCEntityMountEvent {
         return event.getEntityBeingMounted();
     }
     @ZenCodeType.Method
-    public static World getWorld(EntityMountEvent event){
+    public static Level getWorld(EntityMountEvent event){
         return event.getWorldObj();
     }
 }

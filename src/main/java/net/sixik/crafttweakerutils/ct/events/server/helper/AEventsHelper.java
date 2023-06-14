@@ -1,9 +1,7 @@
 package net.sixik.crafttweakerutils.ct.events.server.helper;
 
-import com.blamejared.crafttweaker.api.annotations.ZenRegister;
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker.api.item.IItemStack;
-import net.minecraft.loot.RandomRanges;
-import net.minecraft.world.World;
 import org.openzen.zencode.java.ZenCodeType;
 
 import java.awt.*;
