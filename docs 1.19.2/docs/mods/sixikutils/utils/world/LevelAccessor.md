@@ -24,10 +24,10 @@ myLevelAccessor.getChunkSource();
 
 :::group{name=getLevelData}
 
-Return Type: **invalid**
+Return Type: [LevelData](/mods/sixikutils/utils/world/LevelData)
 
 ```zenscript
-// LevelAccessor.getLevelData() as invalid
+// LevelAccessor.getLevelData() as LevelData
 
 myLevelAccessor.getLevelData();
 ```
@@ -40,5 +40,5 @@ myLevelAccessor.getLevelData();
 |    Name     |                          Type                           | Has Getter | Has Setter |
 |-------------|---------------------------------------------------------|------------|------------|
 | chunkSource | [ChunkSource](/mods/sixikutils/utils/world/ChunkSource) | true       | false      |
-| levelData   | **invalid**                                             | true       | false      |
+| levelData   | [LevelData](/mods/sixikutils/utils/world/LevelData)     | true       | false      |
 

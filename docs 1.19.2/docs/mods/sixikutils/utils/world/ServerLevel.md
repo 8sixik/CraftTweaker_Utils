@@ -329,10 +329,10 @@ myServerLevel.getSeaLevel();
 
 :::group{name=getStructureManager}
 
-Return Type: [StructureManager](/mods/sixikutils/utils/world/StructureManager)
+Return Type: [StructureTemplateManager](/mods/sixikutils/utils/world/StructureTemplateManager)
 
 ```zenscript
-// ServerLevel.getStructureManager() as StructureManager
+// ServerLevel.getStructureManager() as StructureTemplateManager
 
 myServerLevel.getStructureManager();
 ```

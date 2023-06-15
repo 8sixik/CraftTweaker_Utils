@@ -51,4 +51,64 @@ Chunk.fillBiomesFromNoise(biomeResolver as invalid, climateSampler as invalid)
 
 :::
 
+:::group{name=getBelowZeroRetrogen}
+
+Return Type: **invalid**
+
+```zenscript
+// Chunk.getBelowZeroRetrogen() as invalid
+
+myChunk.getBelowZeroRetrogen();
+```
+
+:::
+
+:::group{name=getBlendingData}
+
+Return Type: **invalid**
+
+```zenscript
+// Chunk.getBlendingData() as invalid
+
+myChunk.getBlendingData();
+```
+
+:::
+
+:::group{name=getBlockEntitiesPos}
+
+Return Type: [BlockPos](/vanilla/api/util/math/BlockPos)[]
+
+```zenscript
+// Chunk.getBlockEntitiesPos() as BlockPos[]
+
+myChunk.getBlockEntitiesPos();
+```
+
+:::
+
+:::group{name=getPos}
+
+Return Type: **invalid**
+
+```zenscript
+// Chunk.getPos() as invalid
+
+myChunk.getPos();
+```
+
+:::
+
+:::group{name=getWorldForge}
+
+Return Type: [LevelAccessor](/mods/sixikutils/utils/world/LevelAccessor)
+
+```zenscript
+// Chunk.getWorldForge() as LevelAccessor
+
+myChunk.getWorldForge();
+```
+
+:::
+
 
