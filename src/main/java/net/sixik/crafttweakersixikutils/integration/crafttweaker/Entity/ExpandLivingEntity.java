@@ -1,9 +1,17 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Entity;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
+>>>>>>> Stashed changes
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
@@ -16,7 +24,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @ZenRegister
+<<<<<<< Updated upstream
 @NativeTypeRegistration(value = net.minecraft.world.entity.LivingEntity.class, zenCodeName = "crafttweaker.api.entity.LivingEntity")
+=======
+@Document("mods/sixikutils/utils/entity/LivingEntity")
+@NativeTypeRegistration(value = LivingEntity.class, zenCodeName = "crafttweaker.api.entity.LivingEntity")
+@ZenCodeType.Expansion("crafttweaker.api.entity.LivingEntity")
+>>>>>>> Stashed changes
 public class ExpandLivingEntity {
 
     @ZenCodeType.Method

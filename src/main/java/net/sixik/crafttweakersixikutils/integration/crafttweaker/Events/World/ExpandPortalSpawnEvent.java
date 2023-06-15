@@ -1,6 +1,10 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Events.World;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -9,6 +13,10 @@ import net.sixik.crafttweakersixikutils.source.events.PortalSpawnEvent;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/events/level/PortalSpawnEvent")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = PortalSpawnEvent.class, zenCodeName = "mods.crafttweakerutils.api.events.world.PortalSpawnEvent")
 public class ExpandPortalSpawnEvent {
 

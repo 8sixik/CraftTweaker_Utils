@@ -1,5 +1,6 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Misc.world;
 
+<<<<<<< Updated upstream
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import jdk.jfr.Registered;
 import net.minecraft.core.BlockPos;
@@ -70,4 +71,17 @@ public class ExpandStructureManager {
                 return false;
         }
     }
+=======
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
+import net.minecraft.world.level.StructureManager;
+import net.minecraft.world.level.levelgen.structure.Structure;
+
+@ZenRegister
+@Document("mods/sixikutils/utils/world/StructureManager")
+@NativeTypeRegistration(value = StructureManager.class, zenCodeName = "mods.crafttweakerutils.api.misc.world.StructureManager")
+public class ExpandStructureManager {
+
+>>>>>>> Stashed changes
 }

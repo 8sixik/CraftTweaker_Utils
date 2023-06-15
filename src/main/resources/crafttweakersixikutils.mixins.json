@@ -7,6 +7,10 @@
   "mixins": [
     "ChestBlockEntityMixin",
     "ChestLootGenMixin",
+<<<<<<< Updated upstream
+=======
+    "ChunkGeneratorMixin",
+>>>>>>> Stashed changes
     "EnchantMixin",
     "EntityLivingMixin",
     "MixinEntityPlayer",

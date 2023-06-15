@@ -1,12 +1,20 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Game;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import net.minecraft.client.Minecraft;
 import org.openzen.zencode.java.ZenCodeType;
 
 import java.util.Date;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/game/Game")
+>>>>>>> Stashed changes
 @ZenCodeType.Name("mods.crafttweakerutils.game.Game")
 public class Game {
     @ZenCodeType.Method

@@ -1,6 +1,10 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Entity.type.player.Client;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.mojang.math.Vector3f;
 import net.minecraft.client.Camera;
 import net.minecraft.core.BlockPos;
@@ -11,6 +15,10 @@ import net.minecraft.world.phys.Vec3;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/entity/type/player/client/Camera")
+>>>>>>> Stashed changes
 @ZenCodeType.Name("mods.crafttweakerutils.entity.player.client.Camera")
 public class CTCamera {
 

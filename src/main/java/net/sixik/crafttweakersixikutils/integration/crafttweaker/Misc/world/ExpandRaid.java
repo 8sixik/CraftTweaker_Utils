@@ -1,6 +1,10 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Misc.world;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.raid.Raid;
@@ -8,6 +12,10 @@ import net.minecraft.world.level.Level;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/world/Raid")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = Raid.class, zenCodeName = "mods.crafttweakerutils.api.misc.world.Raid")
 public class ExpandRaid {
 

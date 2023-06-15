@@ -1,6 +1,10 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Entity.type.player.Client;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -11,6 +15,10 @@ import org.openzen.zencode.java.ZenCodeType;
 import java.util.UUID;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/entity/type/player/client/LocalPlayer")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = LocalPlayer.class, zenCodeName = "mods.crafttweakerutils.api.entity.client.LocalPlayer")
 public class MCLocalPlayer {
 

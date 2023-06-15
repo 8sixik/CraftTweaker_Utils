@@ -1,7 +1,13 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Entity.type.player;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
+import com.mojang.authlib.GameProfile;
+>>>>>>> Stashed changes
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -10,18 +16,27 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.ServerStatsCounter;
 import net.minecraft.world.entity.player.Player;
+<<<<<<< Updated upstream
+=======
+import net.minecraft.world.entity.player.ProfilePublicKey;
+>>>>>>> Stashed changes
 import net.minecraft.world.inventory.PlayerEnderChestContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+<<<<<<< Updated upstream
+=======
+import org.jetbrains.annotations.Nullable;
+>>>>>>> Stashed changes
 import org.openzen.zencode.java.ZenCodeType;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @ZenRegister
+<<<<<<< Updated upstream
 @NativeTypeRegistration(value = Player.class, zenCodeName = "crafttweaker.api.entity.type.player.Player")
 public class ExpandPlayer {
 
@@ -36,12 +51,20 @@ public class ExpandPlayer {
     public static boolean isAttackable(Player player) {
         return player.isAttackable();
     }
+=======
+@Document("mods/sixikutils/utils/entity/type/player/Player")
+@NativeTypeRegistration(value = Player.class, zenCodeName = "crafttweaker.api.entity.type.player.Player")
+@ZenCodeType.Expansion("crafttweaker.api.entity.type.player.Player")
+public class ExpandPlayer{
+
+>>>>>>> Stashed changes
 
     @ZenCodeType.Method
     public static boolean isShiftKeyDown(Player player) {
         return player.isShiftKeyDown();
     }
 
+<<<<<<< Updated upstream
     @ZenCodeType.Method
     public static boolean isInvisible(Player player) {
         return player.isInvisible();
@@ -61,6 +84,15 @@ public class ExpandPlayer {
     public static void setNoGravity(Player player, boolean type) {
         player.setNoGravity(type);
     }
+=======
+
+    @ZenCodeType.Method
+    public static float getExperienceProgress(Player player) {
+        return player.experienceProgress;
+    }
+
+
+>>>>>>> Stashed changes
 
     @ZenCodeType.Method
     @ZenCodeType.Getter("xrot")
@@ -75,6 +107,21 @@ public class ExpandPlayer {
     }
 
     @ZenCodeType.Method
+<<<<<<< Updated upstream
+=======
+    @ZenCodeType.Getter("headrot")
+    public static float getyHeadRot(Player player) {
+        return player.yHeadRot;
+    }
+
+    @ZenCodeType.Method
+    @ZenCodeType.Getter("bodyrot")
+    public static float getyBodyRot(Player player) {
+        return player.yBodyRot;
+    }
+
+    @ZenCodeType.Method
+>>>>>>> Stashed changes
     @ZenCodeType.Setter("xrot")
     public static void setxRot(Player player, float rot) {
         player.xRotO = rot;
@@ -85,6 +132,7 @@ public class ExpandPlayer {
     public static void setyRot(Player player, float yaw) {
         player.yRotO = yaw;
     }
+<<<<<<< Updated upstream
 
     @ZenCodeType.Method
     @ZenCodeType.Getter("headrot")
@@ -92,11 +140,14 @@ public class ExpandPlayer {
         return player.yHeadRot;
     }
 
+=======
+>>>>>>> Stashed changes
     @ZenCodeType.Method
     @ZenCodeType.Setter("headrot")
     public static void setyHeadRot(Player player, float yaw) {
         player.yHeadRot = yaw;
     }
+<<<<<<< Updated upstream
 
     @ZenCodeType.Method
     @ZenCodeType.Getter("bodyrot")
@@ -104,11 +155,19 @@ public class ExpandPlayer {
         return player.yBodyRot;
     }
 
+=======
+    @ZenCodeType.Method
+    @ZenCodeType.Setter("yHeadRotO")
+    public static void setyHeadRotO(Player player, float yaw) {
+        player.yHeadRotO = yaw;
+    }
+>>>>>>> Stashed changes
     @ZenCodeType.Method
     @ZenCodeType.Setter("bodyrot")
     public static void setyBodyRot(Player player, float yaw) {
         player.yBodyRot = yaw;
     }
+<<<<<<< Updated upstream
 
     @ZenCodeType.Method
     public static boolean isOnPortalCooldown(Player player) {
@@ -123,6 +182,12 @@ public class ExpandPlayer {
     @ZenCodeType.Method
     public static int getPortalWaitTime(Player player) {
         return player.getPortalWaitTime();
+=======
+    @ZenCodeType.Method
+    @ZenCodeType.Setter("yBodyRotO")
+    public static void setyBodyRotO(Player player, float yaw) {
+        player.yBodyRotO = yaw;
+>>>>>>> Stashed changes
     }
 
     @ZenCodeType.Method

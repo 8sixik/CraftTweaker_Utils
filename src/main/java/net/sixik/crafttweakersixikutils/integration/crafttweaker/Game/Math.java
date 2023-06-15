@@ -2,9 +2,17 @@ package net.sixik.crafttweakersixikutils.integration.crafttweaker.Game;
 
 import com.blamejared.crafttweaker.api.CraftTweakerAPI;
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+import org.openzen.zencode.java.ZenCodeType;
+
+@ZenRegister
+@Document("mods/sixikutils/utils/game/Math")
+>>>>>>> Stashed changes
 @ZenCodeType.Name("mods.crafttweakerutils.misc.Math")
 public class Math {
 

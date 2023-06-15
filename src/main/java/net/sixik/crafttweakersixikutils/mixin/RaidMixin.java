@@ -1,8 +1,18 @@
 package net.sixik.crafttweakersixikutils.mixin;
 
+<<<<<<< Updated upstream
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.raid.Raid;
 import net.minecraft.world.entity.raid.Raids;
+=======
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.raid.Raid;
+import net.minecraft.world.entity.raid.Raids;
+import net.minecraft.world.level.dimension.DimensionType;
+import net.minecraft.world.phys.Vec3;
+>>>>>>> Stashed changes
 import net.minecraftforge.common.MinecraftForge;
 import net.sixik.crafttweakersixikutils.source.events.RaidEvent;
 import org.spongepowered.asm.mixin.Final;
@@ -11,9 +21,17 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+<<<<<<< Updated upstream
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.Iterator;
+=======
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
+
+import java.util.Iterator;
+import java.util.List;
+>>>>>>> Stashed changes
 import java.util.Map;
 
 @Mixin(Raids.class)
@@ -33,12 +51,22 @@ public class RaidMixin {
 //        MinecraftForge.EVENT_BUS.post(new RaidEvent.StartRaidEvent(player, raid, dimensiontype, blockpos, level, raidMap));
 //    }
 
+<<<<<<< Updated upstream
 //    @Inject(method = "createOrExtendRaid(Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/world/entity/raid/Raid;",
 //    at = @At(value ="INVOKE", target = "Lnet/minecraft/world/entity/raid/Raid;isStarted()Z"), locals = LocalCapture.CAPTURE_FAILHARD)
 //    public void ctus$$onStartRaid(ServerPlayer p_37964_, CallbackInfoReturnable<Raid> cir, DimensionType dimensiontype, BlockPos blockpos, List list, int i, Vec3 vec3, BlockPos blockpos1, Raid raid, boolean flag){
 //        //MinecraftForge.EVENT_BUS.post(new RaidEvent.StartRaidEvent(player, raid, dimensiontype, blockpos, level, raidMap));
 //    }
 
+=======
+//    @Inject(method = "Lnet/minecraft/world/entity/raid/Raids;createOrExtendRaid(Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/world/entity/raid/Raid;",
+//    at = @At(value ="HEAD"))
+//    public void ctus$$onStartRaid(ServerPlayer p_37964_, CallbackInfoReturnable<Raid> cir){
+//        MinecraftForge.EVENT_BUS.post(new RaidEvent.StartRaidEvent(p_37964_, raid, dimensiontype, blockpos, level, raidMap));
+//    }
+
+
+>>>>>>> Stashed changes
     @Inject(method = "Lnet/minecraft/world/entity/raid/Raids;tick()V",
             at = @At(value = "INVOKE",
                     target = "Lnet/minecraft/world/entity/raid/Raid;tick()V"),

@@ -3,6 +3,10 @@ package net.sixik.crafttweakersixikutils.integration.crafttweaker.Entity.type.pl
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker.api.item.IItemStack;
 import com.blamejared.crafttweaker.api.item.MCItemStack;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.inventory.Slot;
@@ -12,6 +16,10 @@ import org.openzen.zencode.java.ZenCodeType;
 import javax.annotation.Nullable;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/entity/type/player/client/Slot")
+>>>>>>> Stashed changes
 @ZenCodeType.Name("mods.crafttweakerutils.api.client.Slot")
 public class MCSlot {
 

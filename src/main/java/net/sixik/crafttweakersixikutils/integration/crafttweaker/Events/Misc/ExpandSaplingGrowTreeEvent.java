@@ -1,6 +1,10 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Events.Misc;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -12,6 +16,10 @@ import org.openzen.zencode.java.ZenCodeType;
 import java.util.Random;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/events/level/SaplingGrowTreeEvent")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = SaplingGrowTreeEvent.class, zenCodeName = "mods.crafttweakerutils.api.events.misc.SaplingGrowTreeEvent")
 public class ExpandSaplingGrowTreeEvent {
 

@@ -25,7 +25,11 @@ public class PlayerChestOpenEvent extends PlayerEvent {
 
     public int getOpenCount(){
         if(block instanceof ChestBlockEntity chest){
+<<<<<<< Updated upstream
             ChestBlockEntity.getOpenCount((BlockGetter) chest,chest.getBlockPos());
+=======
+            ChestBlockEntity.getOpenCount(chest.getLevel(),chest.getBlockPos());
+>>>>>>> Stashed changes
         }
         return -404;
     }

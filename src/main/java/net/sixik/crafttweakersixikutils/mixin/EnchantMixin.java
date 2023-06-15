@@ -16,8 +16,13 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.List;
 
+<<<<<<< Updated upstream
 @Mixin(EnchantmentMenu.class)
 public class EnchantMixin {
+=======
+@Mixin({EnchantmentMenu.class})
+public abstract class EnchantMixin {
+>>>>>>> Stashed changes
 
     @Inject(method = "lambda$clickMenuButton$1(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/world/entity/player/Player;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V",
             at = @At(

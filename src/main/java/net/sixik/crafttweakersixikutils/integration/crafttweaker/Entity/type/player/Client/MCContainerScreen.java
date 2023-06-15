@@ -1,11 +1,19 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Entity.type.player.Client;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.player.LocalPlayer;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/entity/type/player/client/ContainerScreen")
+>>>>>>> Stashed changes
 @ZenCodeType.Name("mods.crafttweakerutils.api.client.ContainerScreen")
 public class MCContainerScreen {
 

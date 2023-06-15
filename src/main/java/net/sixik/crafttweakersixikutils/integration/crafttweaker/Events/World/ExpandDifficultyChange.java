@@ -1,11 +1,19 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Events.World;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraftforge.event.DifficultyChangeEvent;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/events/level/DifficultyChangeEvent")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = DifficultyChangeEvent.class, zenCodeName = "mods.crafttweakerutils.api.events.world.DifficultyChangeEvent")
 public class ExpandDifficultyChange {
 

@@ -1,6 +1,10 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Events.Misc;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -9,6 +13,10 @@ import net.minecraftforge.eventbus.api.Event;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/events/level/server/ServerChatEvent")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = ServerChatEvent.class, zenCodeName = "mods.crafttweakerutils.api.events.misc.ServerChatEvent")
 public class ExpandServerChatEvent {
 

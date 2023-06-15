@@ -1,6 +1,10 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Events.World;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +16,12 @@ import org.openzen.zencode.java.ZenCodeType;
 import java.util.Map;
 
 @ZenRegister
+<<<<<<< Updated upstream
 @NativeTypeRegistration(value = RaidEvent.StartRaidEvent.class, zenCodeName = "mods.crafttweakerutils.api.events.world.MCStartRaidEvent")
+=======
+@Document("mods/sixikutils/utils/events/level/StartRaidEvent")
+@NativeTypeRegistration(value = RaidEvent.StartRaidEvent.class, zenCodeName = "mods.crafttweakerutils.api.events.world.StartRaidEvent")
+>>>>>>> Stashed changes
 public class ExpandStartRaidEvent {
 
     @ZenCodeType.Method

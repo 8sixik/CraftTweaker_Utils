@@ -8,7 +8,11 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 
 public class PlayerChestCloseEvent  extends PlayerEvent {
 
+<<<<<<< Updated upstream
     BlockEntity block;
+=======
+    public static BlockEntity block;
+>>>>>>> Stashed changes
     public PlayerChestCloseEvent(Player player, BlockEntity block) {
         super(player);
     }
@@ -24,7 +28,11 @@ public class PlayerChestCloseEvent  extends PlayerEvent {
 
     public int getOpenCount(){
         if(block instanceof ChestBlockEntity chest){
+<<<<<<< Updated upstream
             ChestBlockEntity.getOpenCount((BlockGetter) chest,chest.getBlockPos());
+=======
+            ChestBlockEntity.getOpenCount(chest.getLevel(),chest.getBlockPos());
+>>>>>>> Stashed changes
         }
         return -404;
     }

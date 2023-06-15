@@ -15,11 +15,17 @@ plugins {
 apply plugin: 'org.spongepowered.mixin'
 
 group = 'net.sixik'
-version = '0.3.5'
+version = '1.19.2-V0.3.6'
 
 java {
     archivesBaseName = 'crafttweakersixikutils'
     toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+def reobfFile = file("$buildDir/reobfJar/output.jar")
+def reobfArtifact = artifacts.add('default', reobfFile) {
+    type 'jar'
+    builtBy 'reobfJar'
 }
 
 minecraft {
@@ -111,25 +117,30 @@ repositories {
         url 'https://files.minecraftforge.net/maven'
     }
     maven {
-        name 'crafttweaker and jei'
-        url 'https://maven.blamejared.com'
+        url "https://www.cursemaven.com"
     }
     maven {
-        name = "Curseforge" // Curseforge Maven
-        url = "https://www.cursemaven.com/"
+        url "https://maven.blamejared.com"
     }
 }
 
 dependencies {
+    def mcDep = 'net.minecraftforge:forge:1.19.2-43.2.14'
+    def ctDep = 'curse.maven:crafttweaker-239197:4546506'
+    minecraft mcDep
+    compileOnly(ctDep)
+    runtimeOnly(fg.deobf(ctDep))
+    //implementation fg.deobf(ctDep)
+    //implementation fg.deobf("curse.maven:crafttweaker-239197:4546506")
 
-    minecraft 'net.minecraftforge:forge:1.19.2-43.2.14'
-
-    implementation fg.deobf("curse.maven:crafttweaker-239197:4546506")
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-
+    annotationProcessor 'com.blamejared.crafttweaker:Crafttweaker_Annotation_Processors:3.0.0.10'
 //    implementation fg.deobf("curse.maven:kubejs-238086:4377175")
 //    implementation fg.deobf("curse.maven:rhino-416294:4476056")
 //    implementation fg.deobf("curse.maven:architectury-api-419699:4555749")
+    annotationProcessor mcDep
+    annotationProcessor ctDep
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 jar {
@@ -150,4 +161,8 @@ jar.finalizedBy('reobfJar')
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
+}
+
+compileJava {
+    options.compilerArgs << "-Acrafttweaker.processor.document.output_directory=${file('docsOut')}"
 }

@@ -2,10 +2,18 @@ package net.sixik.crafttweakersixikutils.integration.crafttweaker.Entity.type.pl
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker.api.item.IItemStack;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.stats.ServerStatsCounter;
 import net.minecraft.stats.Stat;
 import net.minecraft.stats.Stats;
+<<<<<<< Updated upstream
+=======
+import net.minecraft.world.entity.Entity;
+>>>>>>> Stashed changes
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.Block;
@@ -13,6 +21,10 @@ import org.openzen.zencode.java.ZenCodeType;
 
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/entity/type/player/StatsCounter")
+>>>>>>> Stashed changes
 @ZenCodeType.Name("mods.crafttweakerutils.api.entity.type.player.StatsCounter")
 public class ExpandStatsCounter {
     
@@ -30,10 +42,17 @@ public class ExpandStatsCounter {
         return this.get(Stats.CUSTOM.get(rl));
     }
 
+<<<<<<< Updated upstream
     @ZenCodeType.Method
     public void set(ResourceLocation rl, int value) {
         this.statFile.setValue(this.player, Stats.CUSTOM.get(rl), value);
     }
+=======
+//    @ZenCodeType.Method
+//    public void set(ResourceLocation rl, int value) {
+//        this.statFile.setValue(this.player, Stats.CUSTOM.get(rl), value);
+//    }
+>>>>>>> Stashed changes
 
     @ZenCodeType.Method
     public void add(ResourceLocation rl, int value) {

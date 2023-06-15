@@ -1,6 +1,10 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Entity.type.player.Client;
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.mojang.blaze3d.pipeline.RenderTarget;
 import com.mojang.blaze3d.shaders.Uniform;
 import com.mojang.math.Matrix3f;
@@ -20,6 +24,10 @@ import java.util.Objects;
 import java.util.UUID;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/entity/type/player/client/GameRender")
+>>>>>>> Stashed changes
 @ZenCodeType.Name("mods.crafttweakerutils.entity.player.client.GameRender")
 public class CTGameRender {
 

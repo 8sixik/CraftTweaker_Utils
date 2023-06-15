@@ -3,12 +3,20 @@ package net.sixik.crafttweakersixikutils.integration.crafttweaker.Events.Entity.
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker.api.item.IItemStack;
 import com.blamejared.crafttweaker.api.item.MCItemStack;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.world.entity.player.Player;
 import net.sixik.crafttweakersixikutils.source.events.players.PlayerEatFoodEvent;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/events/entity/player/PlayerEatFoodEvent")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = PlayerEatFoodEvent.class, zenCodeName = "mods.crafttweakerutils.api.events.entity.player.PlayerEatFoodEvent")
 public class ExpandPlayerEatEvent{
 

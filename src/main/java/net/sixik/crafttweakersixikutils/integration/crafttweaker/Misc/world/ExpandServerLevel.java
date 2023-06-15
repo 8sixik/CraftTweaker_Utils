@@ -4,6 +4,10 @@ import com.blamejared.crafttweaker.api.CraftTweakerAPI;
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker.api.command.argument.IItemStackArgument;
 import com.blamejared.crafttweaker.api.item.IItemStack;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import com.mojang.datafixers.util.Either;
 import net.minecraft.ChatFormatting;
@@ -27,7 +31,13 @@ import java.util.Iterator;
 import java.util.UUID;
 
 @ZenRegister
+<<<<<<< Updated upstream
 @NativeTypeRegistration(value = ServerLevel.class, zenCodeName = "crafttweaker.api.world.ServerLevel")
+=======
+@Document("mods/sixikutils/utils/world/ServerLevel")
+@NativeTypeRegistration(value = ServerLevel.class, zenCodeName = "crafttweaker.api.world.ServerLevel")
+@ZenCodeType.Expansion("crafttweaker.api.world.ServerLevel")
+>>>>>>> Stashed changes
 public class ExpandServerLevel {
     private static final ResourceLocation DEFAULT_STRUCTURE = new ResourceLocation("minecraft:mineshaft");
     private Either<ResourceKey<Structure>, TagKey<Structure>> structure;
@@ -219,6 +229,7 @@ public class ExpandServerLevel {
         return level.getServer().getStructureManager();
     }
 
+<<<<<<< Updated upstream
     @ZenCodeType.Method
     public boolean onStructure(ServerLevel level, ServerPlayer player, String st){
         this.setStructure(st);
@@ -243,6 +254,32 @@ public class ExpandServerLevel {
             return false;
         });
     }
+=======
+//    @ZenCodeType.Method
+//    public static boolean onStructure(ServerLevel level, ServerPlayer player, String st){
+//        this.setStructure(st);
+//        return getIfStructure(level, player);
+//    }
+//
+//    private static boolean getIfStructure(ServerLevel level, ServerPlayer player) {
+//        return (Boolean)this.structure.map((key) -> {
+//                    return level.structureManager().getStructureWithPieceAt(player.blockPosition(), key).isValid();
+//                }, (tag) -> {
+//            Registry<Structure> reg = level.registryAccess().registry(Registry.STRUCTURE_REGISTRY).orElseThrow();
+//            Iterator var4 = reg.getTagOrEmpty(tag).iterator();
+//            Holder holder;
+//            do {
+//                if (!var4.hasNext()) {
+//                    CraftTweakerAPI.LOGGER.error("[SixikUtils] Can't find a structure !");
+//                    return false;
+//                }
+//
+//                holder = (Holder) var4.next();
+//            } while (!level.structureManager().getStructureWithPieceAt(player.blockPosition(), (Structure) holder.value()).isValid());
+//            return false;
+//        });
+//    }
+>>>>>>> Stashed changes
 
     private void setStructure(String resLoc) {
         this.structure = resLoc.startsWith("#") ? Either.right(TagKey.create(Registry.STRUCTURE_REGISTRY, this.safeResourceLocation(resLoc.substring(1)))) : Either.left(ResourceKey.create(Registry.STRUCTURE_REGISTRY, this.safeResourceLocation(resLoc)));

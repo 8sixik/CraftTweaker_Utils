@@ -1,5 +1,9 @@
 package net.sixik.crafttweakersixikutils.integration.crafttweaker.Misc.world;
 
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import jdk.jfr.Registered;
 import net.minecraft.world.level.storage.ServerLevelData;
@@ -8,6 +12,10 @@ import org.openzen.zencode.java.ZenCodeType;
 import java.util.UUID;
 
 @Registered
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/world/ServerLevelData")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = ServerLevelData.class, zenCodeName = "mods.crafttweakerutils.api.misc.world.ServerLevelData")
 public class ExpandServerLevelData {
 

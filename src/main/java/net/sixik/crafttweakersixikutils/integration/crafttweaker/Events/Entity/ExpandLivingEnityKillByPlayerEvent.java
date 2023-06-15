@@ -1,8 +1,16 @@
+<<<<<<< Updated upstream
 package net.sixik.crafttweakerutils.ct.events.server.entity;
+=======
+package net.sixik.crafttweakersixikutils.integration.crafttweaker.Events.Entity;
+>>>>>>> Stashed changes
 
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import com.blamejared.crafttweaker.api.item.IItemStack;
 import com.blamejared.crafttweaker.api.item.MCItemStack;
+<<<<<<< Updated upstream
+=======
+import com.blamejared.crafttweaker_annotations.annotations.Document;
+>>>>>>> Stashed changes
 import com.blamejared.crafttweaker_annotations.annotations.NativeTypeRegistration;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -10,6 +18,10 @@ import net.sixik.crafttweakersixikutils.source.events.LivingEnityKillByPlayerEve
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister
+<<<<<<< Updated upstream
+=======
+@Document("mods/sixikutils/utils/events/entity/living/LivingEntityKillByPlayerEvent")
+>>>>>>> Stashed changes
 @NativeTypeRegistration(value = LivingEnityKillByPlayerEvent.class, zenCodeName = "mods.crafttweakerutils.api.events.entity.LivingEntityKillByPlayerEvent")
 public class ExpandLivingEnityKillByPlayerEvent {
 
